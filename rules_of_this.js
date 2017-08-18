@@ -26,3 +26,9 @@ cl = new ConsoleLog();
 // Rule 3: if function called with 'dot', the object calling it becomes this
 
 console.log(cl.dummy());
+
+// Rule 4 : if invoked independently, this represents window object
+var fun  = cl.dummy
+fun();
+
+// If rules above clashes with each other, it flows from top to bottom in priority.
